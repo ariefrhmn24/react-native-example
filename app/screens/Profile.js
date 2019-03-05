@@ -1,27 +1,17 @@
-// @flow
-import React, { Component } from 'react';
-import {
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
+import { createStackNavigator } from 'react-navigation';
+import Profiles from '../pages/Profiles/Profiles.page';
 
-
-const styles = StyleSheet.create({
-  txt: {
-    fontSize: 20,
-    marginBottom: 20,
-  },
+const ProfileScreen = createStackNavigator(
+  {
+    Profiles: Profiles,
+  }, {
+    defaultNavigationOptions: {
+      headerTitle: 'Profile',
+      headerTintColor: 'blue',
+    },
+    navigationOptions: {
+      tabBarLabel: 'Profile',
+    },
 });
 
-class Profile extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.txt}>Screen 1</Text>
-      </View>
-    );
-  }
-}
-
-export default Profile;
+export default ProfileScreen;

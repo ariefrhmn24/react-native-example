@@ -6,9 +6,8 @@ const FeedScreen = createStackNavigator(
     Feeds: Feeds,
   }, {
     defaultNavigationOptions: {
+      headerTitle: 'Home',
       headerTintColor: 'red',
-      headerStyle: {
-      },
     },
     navigationOptions: {
       tabBarLabel: 'Home',
