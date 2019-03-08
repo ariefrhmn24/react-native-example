@@ -11,6 +11,7 @@ import React from 'react';
 import MainRoutes from './config/router';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
 import axios from 'axios';
 import axiosMiddleware from 'redux-axios-middleware';
 import reducer from './state/reducers/index';
@@ -30,7 +31,7 @@ const composeEnhancers =
     }) : compose;
 
 const enhancer = composeEnhancers(
-  applyMiddleware(axiosMiddleware(client)),
+  applyMiddleware(thunk, axiosMiddleware(client)),
   // other store enhancers if any
 );
 const store = createStore(reducer, enhancer);
