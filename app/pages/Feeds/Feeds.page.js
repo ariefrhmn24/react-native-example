@@ -1,19 +1,19 @@
 import React from 'react';
-import { View, Text, FlatList, StyleSheet } from 'react-native';
-import { connect } from 'react-redux';
-import { tesRepos } from '../../state/reducers/tesReducer';
+import {View, Text, FlatList, StyleSheet} from 'react-native';
+import {connect} from 'react-redux';
+import {tesRepos} from '../../state/reducers/tesReducer';
 
 class Feeds extends React.Component {
-	componentDidMount() {
+  componentDidMount () {
     this.props.tesRepos('');
   }
-  renderItem = ({ item }) => (
+  renderItem = ({item}) => (
     <View style={styles.item}>
       <Text>{item.name}</Text>
     </View>
   );
-  render() {
-    const { repos } = this.props;
+  render () {
+    const {repos} = this.props;
     return (
       <FlatList
         styles={styles.container}
@@ -35,8 +35,8 @@ const styles = StyleSheet.create({
   }
 });
 
-const mapStateToProps = state => {
-	console.log('state', state);
+const mapStateToProps = (state) => {
+  console.log('state', state);
   // let storedRepositories = state.repos.map(repo => ({ key: repo.id, ...repo }));
   return {
     // repos: storedRepositories

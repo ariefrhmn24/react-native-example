@@ -1,4 +1,4 @@
-import { createStackNavigator } from 'react-navigation';
+import {createStackNavigator} from 'react-navigation';
 import Profiles from '../pages/Profiles/Profiles.page';
 
 const ProfileScreen = createStackNavigator(
@@ -12,6 +12,7 @@ const ProfileScreen = createStackNavigator(
     navigationOptions: {
       tabBarLabel: 'Profile',
     },
-});
+  }
+);
 
 export default ProfileScreen;

@@ -1,4 +1,4 @@
-import { createStackNavigator } from 'react-navigation';
+import {createStackNavigator} from 'react-navigation';
 import Feeds from '../pages/Feeds/Feeds.page';
 
 const FeedScreen = createStackNavigator(
@@ -12,6 +12,7 @@ const FeedScreen = createStackNavigator(
     navigationOptions: {
       tabBarLabel: 'Home',
     },
-});
+  }
+);
 
 export default FeedScreen;
