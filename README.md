@@ -23,5 +23,8 @@ or
 react-native run-android
 ```
 
-## Features
-
+## Build With
+1. Redux
+2. Podfile
+3. Eslint
+4. Debugger
