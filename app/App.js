@@ -9,8 +9,8 @@
 
 import React from 'react';
 import MainRoutes from './config/router';
-import { createStore, applyMiddleware } from 'redux';
-import { Provider } from 'react-redux';
+import {createStore, applyMiddleware, compose} from 'redux';
+import {Provider} from 'react-redux';
 import thunk from 'redux-thunk';
 import axios from 'axios';
 import axiosMiddleware from 'redux-axios-middleware';
@@ -42,13 +42,12 @@ const store = createStore(reducer, enhancer);
 // ===========================================
 GLOBAL.XMLHttpRequest = GLOBAL.originalXMLHttpRequest || GLOBAL.XMLHttpRequest;
 GLOBAL.FormData = GLOBAL.originalFormData || GLOBAL.FormData;
-window.__REDUX_DEVTOOLS_EXTENSION__
-window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
-window.__REDUX_DEVTOOLS_EXTENSION__.connect
+window.__REDUX_DEVTOOLS_EXTENSION__;
+window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__;
 // ===========================================
 
 class App extends React.Component {
-  render() {
+  render () {
     return (
       <Provider store={store}>
         <MainRoutes />
